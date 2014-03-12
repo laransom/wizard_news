@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Articles</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+  <h1>All Wizard Articles</h1>
+  <table border="1" style="width:300">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+
+    <%@articles.each do |article| %>
+    <tr>
+      <td><a href="<%= article.url %>"><%= article.title %></a></td>
+      <td><%= article.description %></td>
+    </tr>
+    <% end %>
+  </table>
+</html>
+
